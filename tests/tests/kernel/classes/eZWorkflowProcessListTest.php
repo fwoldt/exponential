@@ -14,7 +14,7 @@
  * @package tests
  */
 
-#[\PHPUnit\Framework\Attributes\Group('database')]
+#[\PHPUnit\Framework\Attributes\Group( 'database' )]
 class eZWorkflowProcessListTest extends ezpDatabaseTestCase
 {
     protected $backupGlobals = false;
