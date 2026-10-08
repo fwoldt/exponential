@@ -174,7 +174,7 @@ b974dde24700fd18ba9d30714509893a  composer.dev.json
 714e6ec883054f8459b60b635c87595a  composer.json
 f60cfd01b06c68d9a61b6b15e1dc7fda  composer.json.dist
 2d91308b2fa30038d9cc37afd0e2d44a  config.env.php.example
-875fe6f304460f35898e4a4c88ce8583  config.php-RECOMMENDED
+5ddfc96ed3922a706e00d0d7b214ed26  config.php-RECOMMENDED
 cc7ccfafe6b4245628b2099dfd4c5dc9  cronjobs/audit.php
 61d291489da4f9b45b694496ab0a7289  cronjobs/basket_cleanup.php
 239cd3f0ef83b344abc63672ba39a9d6  cronjobs/cachecleanup.php
@@ -2992,7 +2992,7 @@ b2661906876c559f0a805cd1378d55b7  doc/changelogs/4.4/unstable/CHANGELOG-4.4.0bet
 d7bfaf80f8066a99e0d74160ffcf8f20  doc/changelogs/6.0/6.0.12.md
 09ae95fd34fca4003ad48cb5fb98e168  doc/changelogs/6.0/6.0.13.md
 32049118b749decc1e1d0493b6bebcf8  doc/changelogs/6.0/6.0.14.md
-a7856b08d629358df9f682c2106d9f22  doc/changelogs/6.0/6.0.15.md
+f3888cbcdc2e3fe7289e0eee05bab181  doc/changelogs/6.0/6.0.15.md
 4f263894a87973f99e99761658ca0d20  doc/changelogs/6.0/6.0.2.md
 f6a43e9644b79e39fb5c671954aaecd8  doc/changelogs/6.0/6.0.3.md
 a9409f4e49a880bc3f66229f097d00b6  doc/changelogs/6.0/6.0.4.md
@@ -6319,7 +6319,7 @@ b000afba47c3a090c5e775dd97d36498  lib/ezutils/classes/ezfiletransport.php
 4edd44a9789dc177db1e7a33309beca9  lib/ezutils/classes/ezhttpfile.php
 e0d8ca296bb2d3d0968aa11679a8d064  lib/ezutils/classes/ezhttppersistence.php
 4547af114e3baa955a67f870d8b9167d  lib/ezutils/classes/ezhttptool.php
-cece74d35efa4b303bacf166d2435836  lib/ezutils/classes/ezini.php
+acc0d54d4c14a0970c2cbb4aaeb6c537  lib/ezutils/classes/ezini.php
 6ee94ad4b0549a535ff40c1dc5e9326d  lib/ezutils/classes/ezinputvalidator.php
 081fb5c82a7fe6ec4e9f97d6fd96c3fa  lib/ezutils/classes/ezintegervalidator.php
 c50b0e01761551f31dadcd7f46ca5fa5  lib/ezutils/classes/ezmail.php
@@ -7834,6 +7834,7 @@ cf18f00c422de9b9f4ab10201485831c  tests/tests/lib/ezutils/eZDebugMessagesTest.ph
 60e4f4c4fcc1cfe2c734e6fc4b947dfd  tests/tests/lib/ezutils/eZExpiryHandlerCacheDirectoryTest.php
 3378e66c399d5c5780bf68e83863d413  tests/tests/lib/ezutils/eZHTTPToolRequestTest.php
 941837b4dbd18a37bcb019e8fb86fb9b  tests/tests/lib/ezutils/eZHTTPToolTest.php
+ef4f5bba6aa419bbae551f9291609068  tests/tests/lib/ezutils/eZINICacheDirectoryPermissionTest.php
 2c63f7f0a0f75b87643f8adc22d3d3f7  tests/tests/lib/ezutils/eZINIEnvironmentTest.php
 e45dd6fcf44b971d6a9e2eac2bd4f1bc  tests/tests/lib/ezutils/eZINIParserAndAccessTest.php
 d4eef8f014d13e399e0aba17dbed3e77  tests/tests/lib/ezutils/eZINISaveFilePermissionsTest.php
