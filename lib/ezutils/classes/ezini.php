@@ -111,6 +111,15 @@ class eZINI
     static protected $filePermission = null;
 
     /**
+     * Mode of the INI cache directory (var/cache/ini) when eZINI creates it. Set the EZP_INI_DIR_PERMISSION constant
+     * to change it; the default stays 0777, as before, for installations whose web server and command line scripts
+     * write the cache as different users. See cacheDirectoryPermission().
+     *
+     * @var null|int
+     */
+    static protected $dirPermission = null;
+
+    /**
      * Array of eZINI instances
      *
      * @var array(eZINI)
@@ -903,7 +912,7 @@ class eZINI
 
         if ( !file_exists( $cachedDir ) )
         {
-            if ( !eZDir::mkdir( $cachedDir, 0777, true ) )
+            if ( !eZDir::mkdir( $cachedDir, self::cacheDirectoryPermission(), true ) )
             {
                 eZDebug::writeError( "Couldn't create cache directory $cachedDir, perhaps wrong permissions", __METHOD__ );
                 return false;
@@ -1277,6 +1286,24 @@ class eZINI
             @chown( $path, $uid );
         if ( $gid !== false && @filegroup( $path ) !== $gid )
             @chgrp( $path, $gid );
+    }
+
+    /**
+     * The mode eZINI creates the INI cache directory with (and the missing directories above it): the
+     * EZP_INI_DIR_PERMISSION constant, 0777 without it. eZDir::mkdir() clears the umask, so the mode is the one the
+     * directory gets. The cache files in it are PHP that is included (EZP_INI_FILE_PERMISSION, 0644): in a directory
+     * others may write, another account can replace them, so 0750, 0755 or 0775 is advisable where the web server and
+     * the command line scripts share a user or a group.
+     *
+     * @return int
+     */
+    static public function cacheDirectoryPermission()
+    {
+        if ( self::$dirPermission === null )
+        {
+            self::$dirPermission = defined( 'EZP_INI_DIR_PERMISSION' ) ? (int)EZP_INI_DIR_PERMISSION : 0777;
+        }
+        return self::$dirPermission;
     }
 
     /**

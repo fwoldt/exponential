@@ -74,6 +74,17 @@
 //define( 'EZP_INI_FILE_PERMISSION', 0644 );
 
 /*
+    Set EZP_INI_DIR_PERMISSION constant to the permissions the INI cache
+    directory (var/cache/ini) gets when it is created; the default is 0777.
+    The cache files in it are included PHP: where the web server and the
+    command line scripts run as the same user or share a group, use 0750,
+    0755 or 0775, so no other account can replace them. An existing directory
+    keeps its mode: change it with chmod, or remove it with the cache.
+    Do keep an octal number as value here ( meaning it starts by a 0 ).
+*/
+//define( 'EZP_INI_DIR_PERMISSION', 0755 );
+
+/*
     Set EZP_INI_SAVE_FILE_PERMISSION constant to the permissions a settings file
     gets when it is created by a save (settings editor, debug bar, setup wizard,
     exp:ini). The default is 0640: owner read/write, group read. A file that
